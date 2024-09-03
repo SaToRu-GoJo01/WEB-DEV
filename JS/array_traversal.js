@@ -41,3 +41,20 @@ console.log(over18);
 
 
 // Reduce()
+// The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+// The reduce() method works from left-to-right in the array. See also reduceRight().
+const numbers1 = [45, 4, 9, 16, 25];
+let sum = numbers1.reduce(myFunction);
+
+function myFunction(total, value, index, array) {
+  // total is the previously returned value or the initial value
+  return total + value;
+}
+console.log(sum);
+// reduce method can accept an initial value
+sum = numbers1.reduce(myFunction11,100)
+function myFunction11(total, value) {
+  return total + value;
+}
+console.log(sum)
